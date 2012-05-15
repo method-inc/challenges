@@ -14,7 +14,7 @@ cat
 ```
 
 ```shell
-$ node solution.coffee word ninja coder
+$ node solution.coffee words ninja coder
 sorry, there is no chain between "ninja" and "coder"
 ```
 
