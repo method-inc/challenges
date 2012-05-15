@@ -1,4 +1,6 @@
-CoffeeScript only:
+# Word Chains
+
+## CoffeeScript only:
 
 Given two words of equal length as command-line arguments, build a chain of words connecting the first to the second. Each word in the chain must be in the dictionary (attached: "words") and every step along the chain must change exactly one letter from the previous word. If a chain cannot be found, let the user know.
 
