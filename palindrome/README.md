@@ -1,2 +1,10 @@
-any language: "the first 7-digit palindromic prime found in consecutive digits of pi"
+# Palindromic Primes
+
+## Language:
+
+Any Language
+
+## Requirements:
+
+Write a program that finds the first 7-digit palindromic prime number contained within consecutive digits of pi.
 
