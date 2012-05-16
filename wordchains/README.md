@@ -7,15 +7,15 @@ Given two words of equal length as command-line arguments, build a chain of word
 for example:
 
 ```shell
-$ node solution.coffee words hot cat
+$ coffee solution.coffee words hot cat
 hot
 cot
 cat
 ```
 
 ```shell
-$ node solution.coffee words ninja coder
-sorry, there is no chain between "ninja" and "coder"
+$ coffee solution.coffee words reading distant
+sorry, there is no chain between "reading" and "distant"
 ```
 
 There are several solutions to this problem; some are orders of magnitude faster than others. Again, for beer!
