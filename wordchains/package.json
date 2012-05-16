@@ -1,0 +1,8 @@
+{
+    "name": "wordchain",
+    "version": "0.0.1",
+    "dependencies": {
+        "v8-profiler": "latest",
+        "underscore": "latest"
+    }
+}
