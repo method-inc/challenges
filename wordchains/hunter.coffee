@@ -13,8 +13,8 @@ loadArgs = ->
 
 # Loads each word from the dictionary file into `dictionary` array
 loadDictionary = (file, length) ->
-  text = fs.readFileSync(file, 'utf-8')
-  dictionary = (word.trim().toLowerCase() for word in text.split('\n') when word.length == length)
+  words = fs.readFileSync(file, 'utf-8').toLowerCase().split('\n')
+  dictionary = (word for word in words when word.length == length)
 
 # Returns a list of words that are one letter off from source
 possibleMoves = (source) ->
@@ -31,16 +31,14 @@ possibleMoves = (source) ->
 # Returns whether or not two words are one step apart
 areNeighbors = (a, b) ->
   diff = 0
-  len = a.length - 1
-  for i in [0..len]
-    if a[i] != b[i] && ++diff > 1 then return false
+  for i in [0..a.length - 1]
+    if a[i] != b[i] && ++diff == 2 then return false
   return diff == 1
 
 # Returns all options that could stem from a path, eg [a, b] -> [[a, b, c], [a, b, d]]
 expandPath = (path) ->
   moves = possibleMoves(path[path.length - 1])
-  subpaths = []
-  subpaths.push(path.slice(0).concat(move)) for move in moves
+  subpaths = (path.concat(move) for move in moves)
   return subpaths
 
 # Recursively searches for `dest`, starting from the `path` array
@@ -50,6 +48,7 @@ findPath = (dest, paths) ->
   newPaths = []
   for path in paths
     newPaths = newPaths.concat(expandPath(path))
+  #console.log("possible paths:", newPaths.length,"dictionary:", dictionary.length)
   if newPaths.length == 0 then return undefined
   return findPath(dest, newPaths)
 

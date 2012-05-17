@@ -1,0 +1,25 @@
+{
+  "name": "wordchains",
+  "description": "Word chains library and runner.",
+  "version": "0.0.1",
+  "author": "Kenny Parnell <k.parnell@gmail.com>",
+  "licenses": [{
+    "type": "LGPL-3.0",
+    "url": "http://www.gnu.org/licenses/lgpl.html"
+  }],
+  "engines": {
+    "node": "~0.6",
+    "npm": "~1.1"
+  },
+  "dependencies": {
+    "coffee-script": "latest",
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/kparnell/WordChains/issues"
+  },
+  "scripts": {
+    "test": "mocha -u bdd -r should --compilers coffee:coffee-script"
+  }
+}
