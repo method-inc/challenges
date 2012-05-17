@@ -36,8 +36,7 @@ possibleMoves = (source) ->
 # Returns all options that could branch from a path, so [a, b] -> [[a, b, c], [a, b, d]]
 branchPath = (path) ->
   moves = possibleMoves(path[path.length - 1])
-  subpaths = (path.concat(move) for move in moves)
-  return subpaths
+  return (path.concat(move) for move in moves)
 
 # Recursively searches for `dest`, starting from the `path` array
 findPath = (dest, paths) ->
