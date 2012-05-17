@@ -41,16 +41,16 @@ branchPath = (path) ->
 
 # Recursively searches for `dest`, starting from the `path` array
 findPath = (dest, paths) ->
-  # First, check the current paths for success
+  # If we have no paths, then this chain is unsolvable (dead end)
+  if paths.length == 0 then return undefined
+  # Check the current paths for success
   for path in paths
     if path[path.length - 1] == dest then return path
-  # Next, branch each path into all of its possible next steps
+  # Branch each path into all of its possible next steps
   newPaths = []
   for path in paths
     newPaths = newPaths.concat(branchPath(path))
-  # If none of our paths have next steps, then this chain is unsolvable (dead end)
-  if newPaths.length == 0 then return undefined
-  # Continue branching paths until we reach a conclusion
+  # Continue searching and branching until we reach a conclusion
   return findPath(dest, newPaths)
 
 # Load dictionary, find solution, display
