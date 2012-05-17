@@ -11,7 +11,7 @@ loadArgs = ->
     process.exit()
   return [args[2], [args[3].toLowerCase(), args[4].toLowerCase()]]
 
-# Loads each word from the dictionary file into `dictionary` array
+# Loads each word from the dictionary file, hashes each permutation that word can take
 loadDictionary = (file, length) ->
   words = fs.readFileSync(file, 'utf-8').toLowerCase().split('\n')
   for word in words when word.length == length
@@ -24,7 +24,7 @@ getPermutations = (word) ->
   return ([word.slice(0, i), '\0', word.slice(i + 1)].join('') for i in [0..word.length - 1])
 
 # Returns a list of words that are one letter off from source
-# Deletes permutations once they've been accessed
+# Deletes possibilities once they've been tried
 possibleMoves = (source) ->
   moves = []
   perms = getPermutations(source)
