@@ -33,21 +33,24 @@ possibleMoves = (source) ->
     delete permutations[perm]
   return moves
 
-# Returns all options that could stem from a path, eg [a, b] -> [[a, b, c], [a, b, d]]
-expandPath = (path) ->
+# Returns all options that could branch from a path, so [a, b] -> [[a, b, c], [a, b, d]]
+branchPath = (path) ->
   moves = possibleMoves(path[path.length - 1])
   subpaths = (path.concat(move) for move in moves)
   return subpaths
 
 # Recursively searches for `dest`, starting from the `path` array
 findPath = (dest, paths) ->
+  # First, check the current paths for success
   for path in paths
     if path[path.length - 1] == dest then return path
+  # Next, branch each path into all of its possible next steps
   newPaths = []
   for path in paths
-    newPaths = newPaths.concat(expandPath(path))
-  #console.log("possible paths:", newPaths.length,"permutations:", Object.keys(permutations).length)
+    newPaths = newPaths.concat(branchPath(path))
+  # If none of our paths have next steps, then this chain is unsolvable (dead end)
   if newPaths.length == 0 then return undefined
+  # Continue branching paths until we reach a conclusion
   return findPath(dest, newPaths)
 
 # Load dictionary, find solution, display
