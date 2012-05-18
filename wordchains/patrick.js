@@ -27,7 +27,13 @@ var findPath = function (source, target) {
 
     var availableWords = {};
 
-    var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    /*
+        Most common letters first. This could be futher optimzied by
+        having a separate array for each position in the word (e.g.,
+        the letter 'e' is the most common letter, but hardly ever
+        the first letter.)
+    */
+    var letters = 'ETAOINSRHLDCUMFPGWYBVKXJQZ'.toLowerCase().split("");
 
     var loadWordsOfLength = function (length) {
         var words =  {};
