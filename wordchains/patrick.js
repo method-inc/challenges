@@ -20,101 +20,105 @@ var main = function (command, arg1, arg2) {
 };
 
 
-var fs = require('fs');
 
-var availableWords = {};
 
-var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
-var last = function (a) {
-    return  a.slice(-1)[0];
-};
-
-function replaceLetter(word,index,letter) {
-    return word.substr(0,index) + letter + word.substr(index+1);
-}
 
 var findPath = function (source, target) {
-    availableWords = loadWordsOfLength(source.length);
-    tryWord(source);
-    return search(source, target);
-};
 
-var loadWordsOfLength = function (length) {
-    var words =  {};
-    var data = fs.readFileSync("./words");
-    data.toString().split('\n').forEach(function(word) {
-        if (length === word.length) words[word] = true;
-    });
-    return words;
-};
+    var availableWords = {};
 
-var tryWord = function (word) {
-    //console.log('trying', word, availableWords[word]);
-    if (availableWords[word]) {
-        availableWords[word] = false;
-        return true;
-    }
-    return false;
-};
+    var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-var search = function (source, target) {
-    return searchExactMatch(source, target) || searchDirectSteps(source, target) || searchIndirectSteps(source, target);
-};
+    var loadWordsOfLength = function (length) {
+        var words =  {};
+        var data = require('fs').readFileSync("./words");
+        data.toString().split('\n').forEach(function(word) {
+            if (length === word.length) words[word] = true;
+        });
+        return words;
+    };
 
-var searchExactMatch = function (source, target) {
-    if (source === target) {
-        return [source];
-    }
-    return false;
-};
-
-var searchDirectSteps = function(source, target) {
-
-    var i;
-    var path;
-    var step;
-    for (i = 0; i < source.length; i++) {
-        step = replaceLetter(source, i, target.charAt(i));
-        if (tryWord(step)) {
-            path = search(step, target);
-            if(path) {
-                path.unshift(source);
-                return path;
-            }
-
+    var tryWord = function (word) {
+        if (availableWords[word]) {
+            availableWords[word] = false;
+            return true;
         }
-    }
+        return false;
+    };
 
-    return false;
+    var search = function (source, target) {
+        return searchExactMatch(source, target) || searchDirectSteps(source, target) || searchIndirectSteps(source, target);
+    };
 
-};
+    var searchExactMatch = function (source, target) {
+        if (source === target) {
+            return [source];
+        }
+        return false;
+    };
 
+    var searchDirectSteps = function(source, target) {
 
-var searchIndirectSteps = function(source, target) {
-
-    var i;
-    var letterIndex;
-    var path;
-    var step;
-
-    for (i = 0; i < source.length; i++) {
-        for (letterIndex = 0; letterIndex < letters.length; letterIndex++) {
-            step = replaceLetter(source, i, letters[letterIndex]);
+        var i;
+        var path;
+        var step;
+        for (i = 0; i < source.length; i++) {
+            step = replaceLetter(source, i, target.charAt(i));
             if (tryWord(step)) {
                 path = search(step, target);
                 if(path) {
                     path.unshift(source);
                     return path;
                 }
+
             }
         }
 
+        return false;
+
+    };
+
+
+    var searchIndirectSteps = function(source, target) {
+
+        var i;
+        var letterIndex;
+        var path;
+        var step;
+
+        for (i = 0; i < source.length; i++) {
+            for (letterIndex = 0; letterIndex < letters.length; letterIndex++) {
+                step = replaceLetter(source, i, letters[letterIndex]);
+                if (tryWord(step)) {
+                    path = search(step, target);
+                    if(path) {
+                        path.unshift(source);
+                        return path;
+                    }
+                }
+            }
+
+        }
+
+        return false;
+
+    };
+
+    var last = function (a) {
+        return  a.slice(-1)[0];
+    };
+
+    function replaceLetter(word,index,letter) {
+        return word.substr(0,index) + letter + word.substr(index+1);
     }
 
-    return false;
+    availableWords = loadWordsOfLength(source.length);
+    tryWord(source);
 
+    return search(source, target);
 };
+
+
 
 
 var runUnitTests = function () {
@@ -136,6 +140,4 @@ var runUnitTests = function () {
 
 
 main.apply(null, process.argv.splice(2));
-
-exports.findPath = findPath;
 
