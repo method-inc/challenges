@@ -127,9 +127,31 @@ var findPath = function (source, target) {
 };
 
 
-
-
 var runUnitTests = function () {
+
+    var isNeighboringPair = function (a,b) {
+        if (a.length !== b.length) return false;
+        var diffs = 0;
+        var i;
+        for (i = 0; i < a.length; i++) {
+            if(a.charAt(i) !== b.charAt(i)) {
+                diffs++;
+            }
+        }
+        return diffs === 1;
+    };
+
+
+    var isValidChain = function(chain) {
+        var i = chain.length;
+        for (i = 0; i < chain.length -1; i++) {
+            if(!isNeighboringPair(chain[i], chain[i+1])) {
+                return false;
+            }
+        }
+        return true;
+    };
+
     var assertEquals = function (name, expected, actual) {
         if (expected.toString() === actual.toString()) {
             console.log(name +  ": passed");
@@ -144,6 +166,10 @@ var runUnitTests = function () {
     assertEquals('three words away', ['hop', 'cop', 'cap', 'cat'], findPath('hop', 'cat'));
     assertEquals('three words away, indirectly', ['find', 'wind', 'wird', 'word'], findPath('find', 'word'));
     assertEquals('"reading" can\'t be connected to "distant"', false, findPath('reading', 'distant'));
+    assertEquals('beach,keach,ketch is deemed to be a valid chain', true, isValidChain(['beach', 'keach', 'ketch']));
+    assertEquals('beach,keach,pitch is not deemed to be a valid chain', false, isValidChain(['beach', 'keach', 'pitch']));
+    assertEquals('beach -> sandy produces a valid chain', true, isValidChain( findPath('beach', 'sandy') ) );
+    assertEquals('return -> sender produces a valid chain', true, isValidChain( findPath('return', 'sender') ) );
 };
 
 
