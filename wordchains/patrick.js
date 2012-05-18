@@ -1,5 +1,7 @@
 /*globals console*/
 
+var hitWords = [];
+
 var main = function (command, arg1, arg2) {
     if (command === "words" && arg1 && arg2) {
        var start = new Date();
@@ -25,6 +27,7 @@ var main = function (command, arg1, arg2) {
 
 var findPath = function (source, target) {
 
+
     var availableWords = {};
 
     /*
@@ -47,6 +50,7 @@ var findPath = function (source, target) {
     var tryWord = function (word) {
         if (availableWords[word]) {
             availableWords[word] = false;
+            hitWords.push(word);
             return true;
         }
         return false;
@@ -73,8 +77,7 @@ var findPath = function (source, target) {
             if (tryWord(step)) {
                 path = search(step, target);
                 if(path) {
-                    path.unshift(source);
-                    return path;
+                    return [source].concat(path);
                 }
 
             }
@@ -98,8 +101,7 @@ var findPath = function (source, target) {
                 if (tryWord(step)) {
                     path = search(step, target);
                     if(path) {
-                        path.unshift(source);
-                        return path;
+                        return [source].concat(path);
                     }
                 }
             }
