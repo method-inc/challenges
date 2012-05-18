@@ -2,12 +2,16 @@
 
 var main = function (command, arg1, arg2) {
     if (command === "words" && arg1 && arg2) {
+       var start = new Date();
        var path = findPath(arg1, arg2);
+       var end = new Date();
        if (path)  {
             console.log(path.join('\n'));
+            console.log((path.length - 1) + ' steps.');
        } else {
             console.log('sorry, there is no chain between "' + arg1 + '" and "' + arg2 + '"');
        }
+       console.log('It took ' + (end-start) + ' milliseconds.');
     } else if (command === "test") {
         runUnitTests();
     } else {
