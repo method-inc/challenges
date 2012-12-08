@@ -34,7 +34,7 @@ It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 
 - Instead of the hamming distance, you'll be using the keyboard distance like a real iPhone.
 - All keys on your keyboard are separated by some shortest path (A -> Z = 1, Z -> P = 9).
-- For each different symbol, instead of the hamming +1, you'll be adding a +N.
+- To find the distance between characters in words, youll add +N instead of hamming +1.
 - N is the keyboard distance between the desired key and the one your user fat-fingered.
 
 ### Tools at your disposal
