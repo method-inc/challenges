@@ -114,9 +114,14 @@ yse => use (1)
 stroustrup => stroustrup (0)
 
 --- original ---
-"I habe alwaus wushed fir my comptuer to be as easu to ude as my telephone; mt wush jas vome true bwcsusw I czm no kingrr dofure iut yiw to yse my telephone." - B. Stroustrup
+"I habe alwaus wushed fir my comptuer to be as easu to ude as my telephone;
+mt wush jas vome true bwcsusw I czm no kingrr dofure iut yiw to yse my telephone."
+- B. Stroustrup
 
 
 ---corrected ---
-"I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone." - B. Stroustrup
+"I have always wished for my computer to be as easy to use as my telephone;
+my wish has come true because I can no longer figure out how to use my telephone."
+- B. Stroustrup
+
 ```
