@@ -8,13 +8,13 @@ comparison:
 	@echo "created fixtures/test-before.txt"
 	@echo "created fixtures/test-after-*.txt"
 
-test-jr:
+test-jr: output
 	diff output.txt fixtures/test-after-jr.txt -y --suppress-common-lines &2>&1
 
-test-mid:
+test-mid: output
 	diff output.txt fixtures/test-after-mid.txt -y --suppress-common-lines &2>&1
 
-test-sr:
+test-sr: output
 	diff output.txt fixtures/test-after-sr.txt -y --suppress-common-lines &2>&1
 
 output:
