@@ -128,3 +128,7 @@ my wish has come true because I can no longer figure out how to use my telephone
 - B. Stroustrup
 
 ```
+
+## Successful Entries
+
+@hunterloftis - 0.183s
