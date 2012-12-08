@@ -2,7 +2,7 @@
 
 ## Language
 
-Anything that takes stdin, that I can run easily.
+Anything that takes stdin that I can also run easily.
 
 ## Bounty
 
