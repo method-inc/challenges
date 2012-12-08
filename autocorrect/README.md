@@ -59,14 +59,14 @@ You can check how your program is doing by running the tests from the makefile:
 
 ```
 $ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 0
-cloud hat big sum per deep women
+blood had his sum per keep woman
 ```
 
 ### Mid
 
 ```
-$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 1
-Cloud, hat big sum per deep women!
+echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 1
+Blood, had his sum per keep woman!
 ```
 
 ### Sr
