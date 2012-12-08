@@ -6,44 +6,46 @@ Anything that takes stdin that I can also run easily.
 
 ## Bounty
 
-This is a hurt-me-plenty mission, so a Little Village gyro - and beer - awaits any Skookum challenger who manages to tackle it.
-I'll even go out and pick it up for you. In the cold. That's how hard this is.
+This is a hurt-me-plenty mission, so a **Little Village gyro - and beer** - awaits any Skookum challenger who manages to tackle it.
+I'll even go out and **pick it up for you.** In the cold. That's how hard this is.
 
 ## Requirements
 
 Someone screwed up a git merge and now the iPhone's autocorrect code has been lost forever.
+
 Shit! Now, when you're sending drunk texts, everyone will know. Unacceptable.
 
-This challenge is to build your own autocorrect algorithm.
+This challenge is to **build your own autocorrect algorithm.**
+
 It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 
 ### Jr
 
-- accept strings of text via stdin.
-- separate words by whitespace (like an iPhone).
-- check each word entered against a dictionary (words.txt).
-- if the word isn't in the dictionary, find a replacement.
-- the replacement should be a dictionary word with the same length and the shortest hamming distance.
-- if two replacements share a hamming distance, the one with the higher frequency wins.
-- output your corrected string to stdout (don't worry about punctuation or formatting).
+- Accept strings of text via stdin.
+- Separate words by whitespace (like an iPhone).
+- Check each word entered against a dictionary (words.txt).
+- Replace any words that aren't in the dictionary file.
+- Replacements should be dictionary words with the shortest hamming distance.
+- If two replacements share a hamming distance, the one with the higher frequency wins.
+- Output your corrected string to stdout (don't worry about punctuation or formatting).
 
 ### Mid
 
-- your output should exactly match the punctuation of the input string.
-- it should also match the formatting (capitalization, white-space) of the input string.
+- Your output should exactly match the punctuation of the input string.
+- It should also match the formatting (capitalization, white-space) of the input string.
 
 ### Sr
 
-- instead of the hamming distance, you'll be using the keyboard distance like a real iPhone.
-- all keys on your keyboard are separated by some shortest path (A -> Z = 1, Z -> P = 9).
-- for each different symbol, instead of the hamming +1, you'll be adding a +N.
+- Instead of the hamming distance, you'll be using the keyboard distance like a real iPhone.
+- All keys on your keyboard are separated by some shortest path (A -> Z = 1, Z -> P = 9).
+- For each different symbol, instead of the hamming +1, you'll be adding a +N.
 - N is the keyboard distance between the desired key and the one your user fat-fingered.
 
 ### Tools at your disposal
 
-- fixtures/words.txt: a dictionary of the top 7.7k English words, sorted by frequency (desc).
-- fixtures/test-*.txt: simple test strings with which to run your code.
-- fixtures/keymap.json: a map between each relevant keyboard key and its neighbors.
+- `fixtures/words.txt` a dictionary of the top 7.7k English words, sorted by frequency (desc).
+- `fixtures/test-*.txt` simple test strings with which to run your code.
+- `fixtures/keymap.json` a map between each relevant keyboard key and its neighbors.
 
 ## Jr Example
 
