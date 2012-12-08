@@ -13,7 +13,8 @@ I'll even go out and **pick it up for you.** In the cold. That's how hard this i
 
 This challenge is to **build your own touch-screen-keyboard inspired autocorrect algorithm.**
 
-It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
+It has three levels of difficulty so the Sr. devs don't get an easy beer off me.
+You can check how your program is doing by running the tests from the makefile:
 
 ### Jr
 
