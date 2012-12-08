@@ -63,7 +63,7 @@ weught => weight (1)
 
 
 ---corrected ---
-Measuring programming progress by lines of code is like measuring aircraft building progress by weight Bill Gates
+measuring programming progress by lines of code is like measuring aircraft building progress by weight bill gates
 
 ```
 
