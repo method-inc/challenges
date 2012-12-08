@@ -48,10 +48,10 @@ It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 ### Testing
 
 - replace START in the makefile, then:
-- `$ make quotes`
-- `$ make output`
-- `$ make test-{{jr/mid/sr}}`
-- `$ make time`
+- `$ make quotes` - a quick test of your output
+- `$ make output` - generates output.txt from fixtures/test-before.txt
+- `$ make test-{{jr/mid/sr}}` - compares output.txt to fixtures/test-after-*.txt
+- `$ make time` - times your program
 
 ## Examples
 
