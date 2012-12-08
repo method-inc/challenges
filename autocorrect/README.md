@@ -129,6 +129,6 @@ my wish has come true because I can no longer figure out how to use my telephone
 
 ```
 
-## Successful Entries
+## Entries
 
 @hunterloftis - 143 lines - 0.183s
