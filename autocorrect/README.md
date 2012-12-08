@@ -43,92 +43,38 @@ It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 ### Tools at your disposal
 
 - `fixtures/words.txt` a dictionary of the top 7.7k English words, sorted by frequency (desc).
-- `fixtures/test-*.txt` simple test strings with which to run your code.
 - `fixtures/keymap.json` a map between each relevant keyboard key and its neighbors.
 
-## Jr Example
+### Testing
+
+- replace START in the makefile, then:
+- `$ make quotes`
+- `$ make output`
+- `$ make test-{{jr/mid/sr}}`
+
+## Examples
+
+### Jr
 
 ```
-$ node hunter.js fixtures/words.txt < fixtures/test-bill.txt
-mersuring => measuring (1)
-programmnig => programming (2)
-progerss => progress (2)
-lihes => lines (1)
-measurnig => measuring (2)
-aircartf => aircraft (4)
-biulding => building (2)
-progrses => progress (2)
-weught => weight (1)
-
---- original ---
-"Mersuring programmnig progerss by lihes of code is like measurnig aircartf biulding progrses by weught." - Bill Gates
-
-
-
----corrected ---
-measuring programming progress by lines of code is like measuring aircraft building progress by weight bill gates
-
+$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 0
+can bad him mum air keep women
 ```
 
-## Mid Example
+### Mid
 
 ```
-node hunter.js fixtures/words.txt < fixtures/test-frequency.txt
-cav => can (1)
-raq => ran (1)
-tun => ten (1)
-ne => he (1)
-
---- original ---
-Cav should be 'Can.' raq should be ran. tun should be ten. ne should be he.
-This works too, right!?
-Numbers: 1, 2, 3. 45678910.
-
-
----corrected ---
-Can should be 'Can.' ran should be ran. ten should be ten. he should be he.
-This works too, right!?
-Numbers: 1, 2, 3. 45678910.
-
+$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 1
+Can, bad him mum air keep women!
 ```
 
-## Sr Example
+### Sr
 
 ```
-$ node hunter.js fixtures/words.txt < fixtures/test-difficult.txt
-habe => have (1)
-alwaus => always (1)
-wushed => wished (1)
-fir => for (1)
-comptuer => computer (4)
-easu => easy (1)
-ude => use (1)
-mt => my (1)
-wush => wish (1)
-jas => has (1)
-vome => come (1)
-bwcsusw => because (3)
-czm => can (2)
-kingrr => longer (3)
-dofure => figure (3)
-iut => out (1)
-yiw => how (2)
-yse => use (1)
-stroustrup => stroustrup (0)
-
---- original ---
-"I habe alwaus wushed fir my comptuer to be as easu to ude as my telephone;
-mt wush jas vome true bwcsusw I czm no kingrr dofure iut yiw to yse my telephone."
-- B. Stroustrup
-
-
----corrected ---
-"I have always wished for my computer to be as easy to use as my telephone;
-my wish has come true because I can no longer figure out how to use my telephone."
-- B. Stroustrup
-
+$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 2
+Cab, has big mum pit deep women!
 ```
 
 ## Submissions
 
-@hunterloftis - 143 lines - 0.183s
+@hunterloftis - 143 lines - 12.180s
