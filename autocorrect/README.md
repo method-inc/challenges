@@ -11,11 +11,7 @@ I'll even go out and **pick it up for you.** In the cold. That's how hard this i
 
 ## Requirements
 
-Someone screwed up a git merge and now the iPhone's autocorrect code has been lost forever.
-
-Shit! Now, when you're sending drunk texts, everyone will know. Unacceptable.
-
-This challenge is to **build your own autocorrect algorithm.**
+This challenge is to **build your own touch-screen-keyboard autocorrect algorithm.**
 
 It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 
