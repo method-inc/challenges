@@ -11,7 +11,7 @@ I'll even go out and **pick it up for you.** In the cold. That's how hard this i
 
 ## Requirements
 
-This challenge is to **build your own touch-screen-keyboard autocorrect algorithm.**
+This challenge is to **build your own touch-screen-keyboard inspired autocorrect algorithm.**
 
 It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 
