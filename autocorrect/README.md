@@ -79,4 +79,4 @@ Cab, has big mum pit deep women!
 ## Submissions
 
 - @snodgrass23 - Jr Mid - 147 lines - 3.029s
-- @hunterloftis - Jr Mid Sr - 145 lines - 11.793s
+- @hunterloftis - Jr Mid Sr - 147 lines - 2.005s
