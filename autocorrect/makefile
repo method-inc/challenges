@@ -1,4 +1,4 @@
-START=node hunter.js fixtures/words.txt
+START=node hunter.js
 
 comparison:
 	cd fixtures && node messtext.js
