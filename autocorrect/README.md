@@ -51,6 +51,7 @@ It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 - `$ make quotes`
 - `$ make output`
 - `$ make test-{{jr/mid/sr}}`
+- `$ make time`
 
 ## Examples
 
