@@ -58,22 +58,22 @@ You can check how your program is doing by running the tests from the makefile:
 ### Jr
 
 ```
-$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 0
-can bad him mum air keep women
+$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 0
+cloud hat big sum per deep women
 ```
 
 ### Mid
 
 ```
-$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 1
-Can, bad him mum air keep women!
+$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 1
+Cloud, hat big sum per deep women!
 ```
 
 ### Sr
 
 ```
-$ echo 'Cav, baz hig num pir reep woorn!' | node hunter.js fixtures/words.txt 2
-Cab, has big mum pit deep women!
+$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 2
+Flood, has big bum pie deep women!
 ```
 
 ## Submissions
