@@ -5,8 +5,6 @@ comparison:
 	cat fixtures/test-before.txt | $(START) 0 > fixtures/test-after-jr.txt
 	cat fixtures/test-before.txt | $(START) 1 > fixtures/test-after-mid.txt
 	cat fixtures/test-before.txt | $(START) 2 > fixtures/test-after-sr.txt
-	@echo "created fixtures/test-before.txt"
-	@echo "created fixtures/test-after-*.txt"
 
 test-jr: output
 	@echo "diff of output.txt (empty = passing):"
@@ -27,17 +25,17 @@ time:
 	time cat fixtures/test-before.txt | $(START) > /dev/null
 
 quotes:
-	@echo "SIMPLE:\n"
+	@echo "\n          SIMPLE (Jr) \n"
 	@cat fixtures/test-bill.txt
-	@cat fixtures/test-bill.txt | $(START)
-	@echo "FREQUENCY (Jr/Mid):\n"
+	@cat fixtures/test-bill.txt | $(START) 0
+	@echo "\n          FREQUENCY (Mid) \n"
 	@cat fixtures/test-frequency.txt
-	@cat fixtures/test-frequency.txt | $(START)
-	@echo "KEYBOARD (Sr):\n"
+	@cat fixtures/test-frequency.txt | $(START) 1
+	@echo "\n          KEYBOARD (Sr) \n"
 	@cat fixtures/test-keyboard.txt
-	@cat fixtures/test-keyboard.txt | $(START)
+	@cat fixtures/test-keyboard.txt | $(START) 2
 	@cat fixtures/test-difficult.txt
-	@cat fixtures/test-difficult.txt | $(START)
+	@cat fixtures/test-difficult.txt | $(START) 2
 
 
 

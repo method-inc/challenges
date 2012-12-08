@@ -2,6 +2,7 @@ output.txt
 fixtures/messtext.js
 fixtures/generate.js
 fixtures/wordfrequency.txt
+fixtures/brown_freq.txt
 hunter.js
 jim.js
 v8.log
