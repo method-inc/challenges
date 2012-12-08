@@ -79,4 +79,4 @@ Flood, has big bum pie deep women!
 ## Submissions
 
 - @snodgrass23 - Jr Mid - 147 lines - 14.207s
-- @hunterloftis - Jr Mid Sr - 153 lines - 2.938s
+- @hunterloftis - Jr Mid Sr - 153 lines - 2.938s (started at almost 60s!)
