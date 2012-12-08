@@ -27,11 +27,14 @@ It has three levels of difficulty so the Sr. devs don't get an easy beer off me:
 
 ### Mid
 
+- All the above, plus:
 - Your output should exactly match the punctuation of the input string.
 - It should also match the formatting (capitalization, white-space) of the input string.
+- If the distance to the nearest dictionary match is > 12, use the original non-dictionary word.
 
 ### Sr
 
+- All the above, plus:
 - Instead of the hamming distance, you'll be using the keyboard distance like a real iPhone.
 - All keys on your keyboard are separated by some shortest path (A -> Z = 1, Z -> P = 9).
 - To find the distance between characters in words, you'll add +N instead of hamming +1.
