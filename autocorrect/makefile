@@ -41,4 +41,4 @@ quotes:
 
 
 
-.PHONY: comparison test-jr test-mid test-sr output quotes
+.PHONY: comparison test-jr test-mid test-sr output quotes time
