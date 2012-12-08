@@ -43,7 +43,7 @@ You can check how your program is doing by running the tests from the makefile:
 
 ### Tools at your disposal
 
-- `fixtures/words.txt` a dictionary of the top 7.7k English words, sorted by frequency (desc).
+- `fixtures/words.txt` a dictionary of the top 47.2k English words, sorted by frequency (desc).
 - `fixtures/keymap.json` a map between each relevant keyboard key and its neighbors.
 
 ### Testing
