@@ -9,13 +9,16 @@ comparison:
 	@echo "created fixtures/test-after-*.txt"
 
 test-jr: output
-	diff output.txt fixtures/test-after-jr.txt -y --suppress-common-lines &2>&1
+	@echo "diff of output.txt (empty = passing):"
+	@diff output.txt fixtures/test-after-jr.txt -y --suppress-common-lines &2>&1
 
 test-mid: output
-	diff output.txt fixtures/test-after-mid.txt -y --suppress-common-lines &2>&1
+	@echo "diff of output.txt (empty = passing):"
+	@diff output.txt fixtures/test-after-mid.txt -y --suppress-common-lines &2>&1
 
 test-sr: output
-	diff output.txt fixtures/test-after-sr.txt -y --suppress-common-lines &2>&1
+	@echo "diff of output.txt (empty = passing):"
+	@diff output.txt fixtures/test-after-sr.txt -y --suppress-common-lines &2>&1
 
 output:
 	cat fixtures/test-before.txt | $(START) > output.txt
