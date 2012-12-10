@@ -3,7 +3,8 @@ fixtures/messtext.js
 fixtures/generate.js
 fixtures/wordfrequency.txt
 fixtures/brown_freq.txt
+v8.log
 hunter.js
 jim.js
 elaforc.js
-v8.log
+jason.js
