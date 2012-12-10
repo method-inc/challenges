@@ -41,10 +41,15 @@ You can check how your program is doing by running the tests from the makefile:
 - To find the distance between characters in words, you'll add +N instead of hamming +1.
 - N is the keyboard distance between the desired key and the one your user fat-fingered.
 
-### Tools at your disposal
+## Tools at your disposal
 
 - `fixtures/words.txt` a dictionary of the top 47.2k English words, sorted by frequency (desc).
 - `fixtures/keymap.json` a map between each relevant keyboard key and its neighbors.
+
+## Warnings
+
+- The makefile will send 0/1/2 as a final argument to your program. Feel free to ignore it.
+- `words.txt` has duplicate entries, so use the highest frequency rank for a duplicated word.
 
 ### Testing
 
@@ -58,25 +63,26 @@ You can check how your program is doing by running the tests from the makefile:
 ### Jr
 
 ```
-$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 0
+$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js
 blood had his sum per keep woman
 ```
 
 ### Mid
 
 ```
-echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 1
+echo 'Clood, haz hig num pir reep woorn!' | node hunter.js
 Blood, had his sum per keep woman!
 ```
 
 ### Sr
 
 ```
-$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js 2
+$ echo 'Clood, haz hig num pir reep woorn!' | node hunter.js
 Flood, has big bum pie deep women!
 ```
 
 ## Submissions
 
+- @elaforc - Jr Mid Sr - 138 lines - 1.910s (!!!)
 - @snodgrass23 - Jr Mid - 147 lines - 14.207s
-- @hunterloftis - Jr Mid Sr - 155 lines - 3.111s (started at almost 60s!)
+- @hunterloftis - Jr Mid Sr - 155 lines - 3.111s (first try: 4x slower)
