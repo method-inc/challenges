@@ -6,20 +6,20 @@ comparison:
 	cat fixtures/test-before.txt | $(START) 1 > fixtures/test-after-mid.txt
 	cat fixtures/test-before.txt | $(START) 2 > fixtures/test-after-sr.txt
 
-test-jr: output
+test-jr:
+	cat fixtures/test-before.txt | $(START) 0 > output.txt
 	@echo "diff of output.txt (empty = passing):"
 	@diff output.txt fixtures/test-after-jr.txt -y --suppress-common-lines &2>&1
 
-test-mid: output
+test-mid:
+	cat fixtures/test-before.txt | $(START) 1 > output.txt
 	@echo "diff of output.txt (empty = passing):"
 	@diff output.txt fixtures/test-after-mid.txt -y --suppress-common-lines &2>&1
 
 test-sr: output
+	cat fixtures/test-before.txt | $(START) 2 > output.txt
 	@echo "diff of output.txt (empty = passing):"
 	@diff output.txt fixtures/test-after-sr.txt -y --suppress-common-lines &2>&1
-
-output:
-	cat fixtures/test-before.txt | $(START) > output.txt
 
 time:
 	time cat fixtures/test-before.txt | $(START) > /dev/null
