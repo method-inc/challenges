@@ -85,7 +85,7 @@ Flood, has big bum pie deep women!
 
 I'll post the code to these awesome solutions in a few days, so everyone has time to hack.
 
-- @jsnodgrass - Mid Sr - 265 lines - 34.100s
+- @jsnodgrass - Mid Sr - 255 lines - 3.658s
 - @elaforc - Sr - 138 lines - 1.910s (!!!)
 - @snodgrass23 - Jr Mid - 147 lines - 14.207s
 - @hunterloftis - Jr Mid Sr - 160 lines - 1.477s (eventually)
