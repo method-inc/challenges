@@ -1,5 +1,8 @@
 START=node hunter.js
 
+setup-jroes:
+	brew install chicken
+
 comparison:
 	cd fixtures && node messtext.js
 	cat fixtures/test-before.txt | $(START) 0 > fixtures/test-after-jr.txt
