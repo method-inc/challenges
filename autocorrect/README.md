@@ -85,7 +85,7 @@ Flood, has big bum pie deep women!
 
 I'll post the code to these awesome solutions in a few days, so everyone has time to hack.
 
-- Maximillian von Briesen - Jr - 105 lines - 0.825s
+- Maximillian von Briesen - JavaScript - Jr - 105 lines - 0.825s
 - @jroes - SCHEME (!!!) - Sr - 143 lines - 1m13.630s
 - @jsnodgrass - JavaScript - Mid Sr - 255 lines - 3.658s
 - @elaforc - JavaScript - Sr - 138 lines - 1.910s (!!!)
