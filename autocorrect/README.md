@@ -6,8 +6,10 @@ Anything that takes stdin that I can also run easily. Ruby, JavaScript, Python, 
 
 ## Bounty
 
-This is a hurt-me-plenty mission, so a **Little Village gyro - and beer** - awaits any Skookum challenger who manages to tackle it.
-I'll even go out and **pick it up for you.** In the cold. That's how hard this is.
+~~This is a hurt-me-plenty mission, so a **Little Village gyro - and beer** - awaits any Skookum challenger who manages to tackle it.
+I'll even go out and **pick it up for you.** In the cold. That's how hard this is.~~
+
+**Update:** All the entries are really cool. I learned something from each. Thanks guys!
 
 ## Requirements
 
