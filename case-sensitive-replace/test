@@ -1,0 +1,37 @@
+#! /usr/bin/env node
+var assert = require('assert');
+var exec = require('child_process').exec;
+var args = process.argv.slice(2)
+
+var scenarios = {
+  'Numbers are often numerical':
+    'Letters are often characters',
+  'Passwords Are Often Numerical':
+    'Passwords Are Often Alphanumerical',
+  'sometimes NUMBERS get wEiRd':
+    'sometimes LETTERS are WEiRd',
+  'What’s the best way to do a Case-Sensitive replacement?':
+    'What’s the best way to do a Case-Insensitive replacement?',
+};
+
+Object.keys(scenarios).forEach(function(original) {
+  var expected = scenarios[original];
+  var cmd = ['echo', original, '|'].concat(args).join(' ');
+  console.time(expected);
+  exec(cmd, function(err, stdout, stderr) { 
+    console.timeEnd(expected);
+    if (err) console.error('Err', err);
+    if (stderr) console.error('Stderr', stderr);
+
+    if (err || stderr) {
+      assert(false, original);
+    }
+    if (stdout) {
+      assert(
+        expected === stdout.trim(),
+        original + ' should equal ' + expected
+      );
+    }
+  });
+});
+
